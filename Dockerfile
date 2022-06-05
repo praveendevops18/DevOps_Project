@@ -18,5 +18,5 @@
 
 
 FROM tomcat:8
-LABEL app=my-app
-COPY target/*.war /usr/local/tomcat/webapps/myapp-1.0.0.war
+#LABEL app=my-app
+COPY target/*.war /usr/local/tomcat/webapps/
