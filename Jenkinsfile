@@ -12,6 +12,10 @@ node {
 			sh 'mvn test'
 	}
 	
+    stage ('Junit test reports') {
+			junit '*/target/test-classes/*.xml'	
+	}	
+	
     stage ('Deploy to tomcat') {
 			deploy adapters: [tomcat8(credentialsId: 'tomcatDeployer', path: '', url: 'http://10.0.9.214:8080')], contextPath: 'sample', war: '**/*.war'
 	}	
