@@ -13,7 +13,7 @@ node {
 	}
 	
     stage ('Deploy to tomcat') {
-			deploy adapters: [tomcat8(credentialsId: 'tomcatdeploy', path: '', url: 'http://13.233.237.0:8080')], contextPath: null, war: '**/*.war'
+			deploy adapters: [tomcat8(credentialsId: 'tomcatDeployer', path: '', url: 'http://10.0.9.214:8080')], contextPath: 'sample', war: '**/*.war'
 	}	
 
 }
