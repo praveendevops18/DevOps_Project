@@ -10,10 +10,6 @@ node {
 	
     stage ('Testing the package') {
 			sh 'mvn test'
-	}
-	
-    stage ('Junit test reports') {
-			junit '*/target/*.xml'	
 	}	
 	
     stage ('Deploy to tomcat') {
