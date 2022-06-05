@@ -6,7 +6,7 @@
 # EXPOSE 80
 #CMD [“echo”,”Image created”] 
 
-FROM tomcat:8*
-LABEL app=myapp
+FROM ubuntu
+COPY target/*.war /
 EXPOSE 8080
-COPY target/*.war /usr/local/tomcat/webapps/myapp-1.0.0.war
+COPY target/*.war /usr/local/tomcat/webapps/myapp.war
