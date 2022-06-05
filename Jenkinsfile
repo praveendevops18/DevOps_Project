@@ -13,7 +13,7 @@ node {
 	}
 	
     stage ('Junit test reports') {
-			junit '*/target/test-classes/*.xml'	
+			junit '*/target/*.xml'	
 	}	
 	
     stage ('Deploy to tomcat') {
