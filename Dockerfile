@@ -11,8 +11,12 @@
 #EXPOSE 8080
 #COPY target/*.war /usr/local/tomcat/webapps/myapp.war
 
-FROM tomcat:8-jre8 
-
+#FROM tomcat:8-jre8 
 # Maintainer 
-MAINTAINER "praveenbdevops18@gmal.com" 
-COPY ./myapp-1.0.0.war /usr/local/tomcat/webapps
+#MAINTAINER "praveenbdevops18@gmal.com" 
+#COPY ./myapp-1.0.0.war /usr/local/tomcat/webapps
+
+
+FROM tomcat:8
+LABEL app=my-app
+COPY target/*.war /usr/local/tomcat/webapps/myweb.war
