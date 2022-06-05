@@ -8,4 +8,5 @@
 
 FROM tomcat:8
 LABEL app=myapp
+EXPOSE 8080
 COPY target/*.war /usr/local/tomcat/webapps/myapp-1.0.0.war
